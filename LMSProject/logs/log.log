@@ -1,0 +1,30 @@
+[INFO ] 2022-09-23 21:33:07,977 ScnContext.setUp() - Launched browser
+[INFO ] 2022-09-23 21:33:22,237 ScnContext.user_is_on_any_page_after_login() - User is on any page after Login
+[INFO ] 2022-09-23 21:33:24,378 ScnContext.user_clicks_the_user_menu() - User clicks the USER menu
+[INFO ] 2022-09-23 21:33:24,391 ScnContext.user_should_land_on_manage_user_page() - User is on Manage user page
+[INFO ] 2022-09-23 21:33:25,281 ScnContext.setUp() - Launched browser
+[INFO ] 2022-09-23 21:33:36,025 ScnContext.user_is_on_any_page_after_login() - User is on any page after Login
+[INFO ] 2022-09-23 21:33:36,026 ScnContext.user_is_on_the_manage_user_page_after_clicking_user_menu() - User is on the Manage user page after clicking User menu
+[INFO ] 2022-09-23 21:33:47,024 ScnContext.setUp() - Launched browser
+[INFO ] 2022-09-23 21:33:59,404 ScnContext.user_is_on_any_page_after_login() - User is on any page after Login
+[INFO ] 2022-09-23 21:33:59,405 ScnContext.user_is_on_the_manage_user_page_after_clicking_user_menu() - User is on the Manage user page after clicking User menu
+[INFO ] 2022-09-23 21:33:59,468 ScnContext.user_should_see_the_pagination_controls_below_data_table() - Pagination is displayed
+[INFO ] 2022-09-23 21:34:00,356 ScnContext.setUp() - Launched browser
+[INFO ] 2022-09-23 21:34:11,154 ScnContext.user_is_on_manage_user_page() - User is on Manage user page
+[INFO ] 2022-09-23 21:34:11,268 ScnContext.manage_user_table_has_more_than_or_equal_to_five_rows() - Verifying pagination functionality
+[INFO ] 2022-09-23 21:34:11,375 ScnContext.pagination_control_should_be_enabled() - Pagination control enabled
+[INFO ] 2022-09-23 21:34:12,266 ScnContext.setUp() - Launched browser
+[INFO ] 2022-09-23 21:34:23,140 ScnContext.user_table_is_displayed_in_manage_user_page() - User table is displayed in manage user page
+[INFO ] 2022-09-23 21:34:25,224 ScnContext.setUp() - Launched browser
+[INFO ] 2022-09-23 21:34:36,464 ScnContext.user_table_is_displayed_in_manage_user_page() - User table is displayed in manage user page
+[INFO ] 2022-09-23 21:34:38,519 ScnContext.setUp() - Launched browser
+[INFO ] 2022-09-23 21:34:50,087 ScnContext.user_is_logged_on_to_the_lms_website() - User is logged on to the LMS website
+[INFO ] 2022-09-23 21:34:50,195 ScnContext.user_lands_on_manage_user_page() - User lands on Manage User page
+[INFO ] 2022-09-23 21:34:50,327 ScnContext.user_should_see_the_text_below_the_user_table() - No of entries displayed
+[INFO ] 2022-09-23 21:34:51,227 ScnContext.setUp() - Launched browser
+[INFO ] 2022-09-23 21:35:01,900 ScnContext.user_is_logged_on_to_the_lms_website() - User is logged on to the LMS website
+[INFO ] 2022-09-23 21:35:02,012 ScnContext.user_lands_on_manage_user_page() - User lands on Manage User page
+[INFO ] 2022-09-23 21:35:02,132 ScnContext.user_should_see_the_table_footer_as() - User details displayed in table footer
+[INFO ] 2022-09-23 21:35:02,987 ScnContext.setUp() - Launched browser
+[INFO ] 2022-09-23 21:35:13,551 ScnContext.user_is_on_any_page_after_login() - User is on any page after Login
+[INFO ] 2022-09-23 21:35:13,552 ScnContext.user_is_on_the_manage_user_page_after_clicking_user_menu() - User is on the Manage user page after clicking User menu
