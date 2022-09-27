@@ -39,13 +39,13 @@ public class UserDetails {
 	By lstAlaska = By.xpath("//span[contains(text(),'Alaska')]");
 
 	By userrole_details = By.xpath("");
-	By submit_btn = By.xpath("//span[contains(text(),'Submit')]");
+	By submit_btn = By.xpath("//span[normalize-space()='Submit']");
 	By userdetailserror_msg = By.xpath("");
 	By adduser_name1 = By.xpath("//td[contains(text(),'Vidhya')]");
 	By address_2 = By.xpath("//span[contains(text(),' + Add C/O, Apt, Suite, Unit ')]");
 	By address2_option = By.xpath("//textarea[@data-placeholder='Address 2']");
 	By usercancel_btn = By.xpath("//span[normalize-space()='Cancel']");
-	By x_icon = By.xpath("//button[@class='ng-tns-c132-1073 p-dialog-header-icon p-dialog-header-close p-link p-ripple ng-star-inserted']");
+	By x_icon = By.xpath("//button[@type='button']//span[@xpath='1']");
 			
     public boolean Xicondisplay() {
 	    return ldriver.findElement(x_icon).isDisplayed();
@@ -111,7 +111,7 @@ public class UserDetails {
 	//
 
 	
-	public void sendvaliddetails (String FirstName, String MiddleName, String LastName, String Emailaddress, String Phoneno, String Address, String City, String State, String PostalCode, String Program, String UGProgram, String PGProgram, String Skill, String Experience, String UserRole, String VisaStatus, String Batch, String Comments, String UserName, String Password, String FieldType) {
+	public void sendvaliddetails (String FirstName, String MiddleName, String LastName, String Emailaddress, String Phoneno, String Address, String City, String PostalCode, String Program, String PGProgram, String Skill, String Experience, String VisaStatus, String Batch, String Comments, String UserName, String Password) {
 		ldriver.findElement(first_name).sendKeys(FirstName);
 		ldriver.findElement(middle_name).sendKeys(MiddleName);
 		ldriver.findElement(last_name).sendKeys(LastName);
@@ -119,20 +119,20 @@ public class UserDetails {
 		ldriver.findElement(phone_no).sendKeys(Phoneno);
 		ldriver.findElement(address).sendKeys(Address);
 		ldriver.findElement(city).sendKeys(City);
-		ldriver.findElement(state).sendKeys(State);
+		//ldriver.findElement(state).sendKeys(State);
 		ldriver.findElement(postal_code).sendKeys(PostalCode);
 		ldriver.findElement(program).sendKeys(Program);
-		ldriver.findElement(ug_program).sendKeys(UGProgram);
+		//ldriver.findElement(ug_program).sendKeys(UGProgram);
 		ldriver.findElement(pg_program).sendKeys(PGProgram);
 		ldriver.findElement(skill).sendKeys(Skill);
 		ldriver.findElement(experience).sendKeys(Experience);
-		ldriver.findElement(user_role).sendKeys(UserRole);
+		//ldriver.findElement(user_role).sendKeys(UserRole);
 		ldriver.findElement(visa_status).sendKeys(VisaStatus);
 		ldriver.findElement(batch).sendKeys(Batch);
 		ldriver.findElement(comments).sendKeys(Comments);
 		ldriver.findElement(user_name).sendKeys(UserName);
 		ldriver.findElement(password).sendKeys(Password);
-		ldriver.findElement(field_type).sendKeys(FieldType);
+		//ldriver.findElement(field_type).sendKeys(FieldType);
 	}
 	
 	public boolean displayaddedusername() {

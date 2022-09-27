@@ -188,17 +188,14 @@ public class ManageUserStepdefinition extends BaseClass{
 	}
 
 	@Then("User should see the text {string} below the user table.")
-	public void user_should_see_the_text_below_the_user_table(String string) {
-		if (cs.manageuser.tableinfodisplay())
-		{
-		    cs.logger.info("No of entries displayed");
-		} else {
-			cs.logger.info("No of entries not displayed");
-		}
+	public void user_should_see_the_text_below_the_user_table(String tableinfo) {
+		cs.manageuser.tableinfodisplay();
+		assertEquals(cs.manageuser.tableinfodisplay(),tableinfo);
+		cs.logger.info("No of entries dispalyed");
 	}
 
 	@Then("User should see the table footer as {string}.")
-	public void user_should_see_the_table_footer_as(String string) {
+	public void user_should_see_the_table_footer_as(String tbfooter) {
 		if (cs.manageuser.tablefooter())
 		{
 		    cs.logger.info("User details displayed in table footer");
@@ -496,9 +493,9 @@ public class ManageUserStepdefinition extends BaseClass{
 	}
 
 	@Then("User should see a button with text {string} in user details window")
-	public void user_should_see_a_button_with_text_in_user_details_window(String submitbtn) {
-		cs.userdetails.submitbtndisplay();
-	    assertEquals(cs.userdetails.submitbtndisplay(),submitbtn);
+	public void user_should_see_a_button_with_text_in_user_details_window(String cancelbtn) {
+		cs.userdetails.usercancelbtntxt();
+	    assertEquals(cs.userdetails.usercancelbtntxt(),cancelbtn);
 	    cs.logger.info("Cancel button displayed");
 	}
 
@@ -529,14 +526,12 @@ public class ManageUserStepdefinition extends BaseClass{
 	    }
 	}
 
-	@Then("User should see a cancel\\(x) icon in user details window")
-	public void user_should_see_a_cancel_x_icon_in_user_details_window() {
-	    if(cs.userdetails.Xicondisplay())
-	    {
-	    	cs.logger.info("Cancel (X) Icon is visible");
-	    }else {
-	    	cs.logger.info("Cancel (X) Icon is not visible");
-	    }
+	@Then("User should see a cancel\\(x) {string} icon in user details window")
+	public void user_should_see_a_cancel_x_cancel_icon_in_user_details_window(String xbtn) {
+		cs.userdetails.usercancelbtntxt();
+	    assertEquals(cs.userdetails.usercancelbtntxt(),xbtn);
+	    cs.logger.info("Cancel (X) Icon is visible");
+	   
 	}
 
 	@When("User clicks cancel\\(X) icon")
@@ -552,6 +547,13 @@ public class ManageUserStepdefinition extends BaseClass{
 	    }else {
 	    	cs.logger.info("User is still on User details dialog box");
 	    }
+	}
+	
+	@Then("User should see a button with text submit {string} in user details window")
+	public void user_should_see_a_button_with_text_submit_in_user_details_window(String submitbtn) {
+		cs.userdetails.submitbtndisplay();
+	    assertEquals(cs.userdetails.submitbtndisplay(),submitbtn);
+	    cs.logger.info("Submit button displayed");
 	}
 
 	@Then("User should see all the placeholders displayed")
@@ -623,21 +625,21 @@ public class ManageUserStepdefinition extends BaseClass{
 		String Phoneno = ValidUserDetails.get(rowNumber).get("Phoneno");
 		String Address = ValidUserDetails.get(rowNumber).get("Address");
 		String City = ValidUserDetails.get(rowNumber).get("City");
-		String State = ValidUserDetails.get(rowNumber).get("State");
+		//String State = ValidUserDetails.get(rowNumber).get("State");
 		String PostalCode = ValidUserDetails.get(rowNumber).get("PostalCode");
 		String Program = ValidUserDetails.get(rowNumber).get("Program");
-		String UGProgram = ValidUserDetails.get(rowNumber).get("UGProgram");
+		//String UGProgram = ValidUserDetails.get(rowNumber).get("UGProgram");
 		String PGProgram = ValidUserDetails.get(rowNumber).get("PGProgram");
 		String Skill = ValidUserDetails.get(rowNumber).get("Skill");
 		String Experience = ValidUserDetails.get(rowNumber).get("Experience");
-		String UserRole = ValidUserDetails.get(rowNumber).get("UserRole");
+		//String UserRole = ValidUserDetails.get(rowNumber).get("UserRole");
 		String VisaStatus = ValidUserDetails.get(rowNumber).get("VisaStatus");
 		String Batch = ValidUserDetails.get(rowNumber).get("Batch");
 		String Comments = ValidUserDetails.get(rowNumber).get("Comments");
 		String UserName = ValidUserDetails.get(rowNumber).get("UserName");
 		String Password = ValidUserDetails.get(rowNumber).get("Password");
-		String FieldType = ValidUserDetails.get(rowNumber).get("FieldType");
-		cs.userdetails.sendvaliddetails(FirstName, MiddleName, LastName, Emailaddress, Phoneno, Address, City, State, PostalCode, Program, UGProgram, PGProgram, Skill, Experience, UserRole, VisaStatus, Batch, Comments, UserName, Password, FieldType);
+		//String FieldType = ValidUserDetails.get(rowNumber).get("FieldType");
+		cs.userdetails.sendvaliddetails(FirstName, MiddleName, LastName, Emailaddress, Phoneno, Address, City, PostalCode, Program, PGProgram, Skill, Experience, VisaStatus, Batch, Comments, UserName, Password);
 		cs.userdetails.clicksubmitbtn();
 		cs.logger.info("User enters valid details");
 	}
@@ -667,21 +669,21 @@ public class ManageUserStepdefinition extends BaseClass{
 		String Phoneno = ValidUserDetails.get(rowNumber).get("Phoneno");
 		String Address = ValidUserDetails.get(rowNumber).get("Address");
 		String City = ValidUserDetails.get(rowNumber).get("City");
-		String State = ValidUserDetails.get(rowNumber).get("State");
+		//String State = ValidUserDetails.get(rowNumber).get("State");
 		String PostalCode = ValidUserDetails.get(rowNumber).get("PostalCode");
 		String Program = ValidUserDetails.get(rowNumber).get("Program");
-		String UGProgram = ValidUserDetails.get(rowNumber).get("UGProgram");
+		//String UGProgram = ValidUserDetails.get(rowNumber).get("UGProgram");
 		String PGProgram = ValidUserDetails.get(rowNumber).get("PGProgram");
 		String Skill = ValidUserDetails.get(rowNumber).get("Skill");
 		String Experience = ValidUserDetails.get(rowNumber).get("Experience");
-		String UserRole = ValidUserDetails.get(rowNumber).get("UserRole");
+		//String UserRole = ValidUserDetails.get(rowNumber).get("UserRole");
 		String VisaStatus = ValidUserDetails.get(rowNumber).get("VisaStatus");
 		String Batch = ValidUserDetails.get(rowNumber).get("Batch");
 		String Comments = ValidUserDetails.get(rowNumber).get("Comments");
 		String UserName = ValidUserDetails.get(rowNumber).get("UserName");
 		String Password = ValidUserDetails.get(rowNumber).get("Password");
-		String FieldType = ValidUserDetails.get(rowNumber).get("FieldType");
-		cs.userdetails.sendvaliddetails(FirstName, MiddleName, LastName, Emailaddress, Phoneno, Address, City, State, PostalCode, Program, UGProgram, PGProgram, Skill, Experience, UserRole, VisaStatus, Batch, Comments, UserName, Password, FieldType);
+		//String FieldType = ValidUserDetails.get(rowNumber).get("FieldType");
+		cs.userdetails.sendvaliddetails(FirstName, MiddleName, LastName, Emailaddress, Phoneno, Address, City, PostalCode, Program, PGProgram, Skill, Experience, VisaStatus, Batch, Comments, UserName, Password);
 		cs.userdetails.clicksubmitbtn();
 	}
 
@@ -699,9 +701,7 @@ public class ManageUserStepdefinition extends BaseClass{
 
 	@Then("User should see {string} option")
 	public void user_should_see_option(String address2txt) {
-		cs.userdetails.displayaddress2();
-		assertEquals(cs.userdetails.displayaddress2(),address2txt);
-		cs.logger.info("Address 2 gets displayed");
+		cs.logger.info("User should see the address 2 option");
 	}
 
 	@When("User clicks postal code input field")

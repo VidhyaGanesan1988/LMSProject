@@ -1,4 +1,4 @@
-Feature: User Details DialogBox
+#Feature: User Details DialogBox
   #
   #
   #Scenario: Verify the heading of User details window
@@ -19,7 +19,7 @@ Feature: User Details DialogBox
    #Scenario: Verify the presence of Cancel(x) icon in user details window
      #Given User is on Manage user page
      #When User clicks Add new user button
-     #Then User should see a cancel(x) icon in user details window
+     #Then User should see a cancel(x) "Cancel" icon in user details window
     #
    #Scenario: Validating functionality of Cancel(x) icon
       #Given User is on User details window
@@ -29,7 +29,7 @@ Feature: User Details DialogBox
    #Scenario: Verify the presence of Submit button in user details window
      #Given User is on Manage user page
      #When User clicks Add new user button
-     #Then User should see a button with text "true" in user details window
+     #Then User should see a button with text submit "Submit" in user details window
      #
    #Scenario: Verify the presence of Label Texts
      #Given User is on Manage user page
@@ -51,15 +51,15 @@ Feature: User Details DialogBox
      #When User clicks save button with all fields empty   
      #Then User should see a message "Mandatory Fields cannot be empty"
      #
-   Scenario Outline: Validating the User details window with valid inputs 
-     Given User is on User details window
-     When User clicks Save button by entering all valid values from "<SheetName>" and <Rownumber> 
-     Then New User Should be Saved
-     
-   Examples: 
-      | SheetName        | Rownumber | 
-      | ValidUserDetails |     0     |
-     
+   #Scenario Outline: Validating the User details window with valid inputs 
+     #Given User is on User details window
+     #When User clicks Save button by entering all valid values from "<SheetName>" and <Rownumber> 
+     #Then New User Should be Saved
+     #
+   #Examples: 
+      #| SheetName        | Rownumber | 
+      #| ValidUserDetails |     0     |
+     #
    #Scenario Outline: Validating the User details window with invalid inputs
      #Given User is on User details window
      #When User clicks Save button by entering invalid values from "<SheetName>" and <Rownumber> 

@@ -88,9 +88,8 @@ public class ManageUser {
 		return ldriver.findElement(first_page).isDisplayed();
 	}
 	
-	public boolean tableinfodisplay() {
-		ldriver.findElement(table_info).isDisplayed();
-		return true;
+	public String tableinfodisplay() {
+		return ldriver.findElement(table_info).getText();
 	}
 	
 	public boolean tablefooter() {
