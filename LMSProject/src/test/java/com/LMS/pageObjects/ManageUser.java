@@ -43,7 +43,7 @@ public class ManageUser {
 	By success_msg = By.xpath("//div[contains(text(),'Successful')]");
 	By no_btn = By.xpath("//span[contains(text(),'No')]");
 	By x_btn = By.xpath("//span[contains(text(),'No')]");
-	By row_deletebtn = By.xpath("//button[@class='p-button-rounded p-button-danger p-button p-component p-button-icon-only']");
+	By row_deletebtn = By.xpath("//body[1]/app-root[1]/app-user[1]/div[1]/mat-card[1]/mat-card-content[1]/p-table[1]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[8]/div[1]/span[2]/button[1]/span[1]");
 	By row_warnmsg = By.xpath("//span[contains(text(),'Are you sure you want to delete John  Dove?')]");
 	By edit_btn = By.xpath("//span[@class='p-button-icon pi pi-pencil']");
 	By search_option = By.xpath("//input[@placeholder='Search...']");

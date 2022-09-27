@@ -136,6 +136,4 @@ Feature: Manage User Menu
        Given User table is displayed in manage user page
        When User clicks cancel button in user details dialog box
        Then User details dialog box is closed
-     
-     
-     
+    
